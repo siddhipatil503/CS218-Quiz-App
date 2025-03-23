@@ -1,0 +1,24 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Python virtual environment
+venv/
+
+# Test cache
+*.pytest_cache/
+
+# Node dependencies (React app)
+quiz-app/node_modules/
+
+# Docker ignore files (optional but can be tracked if you like)
+# .dockerignore
+# quiz-app/.dockerignore
+
+# Ignore local test artifacts
+*.log
+*.sqlite3
+
+# OS-specific
+.DS_Store

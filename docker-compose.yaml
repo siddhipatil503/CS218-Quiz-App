@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    container_name: flask-backend
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+    restart: always
+
+  frontend:
+    build:
+      context: ./quiz-app
+    container_name: react-frontend
+    ports:
+      - "3000:80"
+    stdin_open: true
+    tty: true
+    restart: always
