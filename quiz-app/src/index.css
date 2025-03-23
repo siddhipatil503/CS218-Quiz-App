@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply text-black bg-gray-100 text-lg;
+}
+
+.nav-tab {
+    @apply text-black px-6 py-3 border-b-4 border-transparent transition-all hover:border-yellow-400;
+}
+
+input {
+    @apply w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-black;
+}
+
+button {
+    @apply px-6 py-3 rounded-lg font-semibold transition text-black;
+}
+
+.section {
+    @apply w-full max-w-6xl mx-auto mt-16 p-10 bg-white shadow-lg rounded-lg text-black;
+}
