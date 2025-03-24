@@ -21,7 +21,7 @@ const Dashboard = () => {
 
             console.log("🟡 Fetching quizzes with token:", token);
 
-            const res = await axios.get("http://localhost:5000/quizzes", {
+            const res = await axios.get("http://3.142.36.11:5000/quizzes", {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setQuizzes(res.data || []); 
@@ -41,7 +41,7 @@ const Dashboard = () => {
     
             console.log("Sending Quiz Data:", JSON.stringify(payload));
     
-            const res = await axios.post("http://localhost:5000/quizzes", payload, {
+            const res = await axios.post("http://3.142.36.11:5000/quizzes", payload, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                     "Content-Type": "application/json"

@@ -10,7 +10,7 @@ const Register = () => {
 
     const handleRegister = async () => {
         try {
-            const res = await axios.post("http://localhost:5000/register", {
+            const res = await axios.post("http://3.142.36.11:5000/register", {
                 username,
                 password,
                 role,

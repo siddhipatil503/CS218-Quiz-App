@@ -13,7 +13,7 @@ const AdminDashboard = () => {
 
     const fetchQuizzes = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/quizzes");
+            const res = await axios.get("http://3.142.36.11:5000/quizzes");
             setQuizzes(res.data);
         } catch (error) {
             console.error("Failed to load quizzes", error);
@@ -23,7 +23,7 @@ const AdminDashboard = () => {
     const createQuiz = async () => {
         try {
             const token = localStorage.getItem("token");
-            await axios.post("http://localhost:5000/quizzes", { title: newQuizTitle }, {
+            await axios.post("http://3.142.36.11:5000/quizzes", { title: newQuizTitle }, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setNewQuizTitle("");  

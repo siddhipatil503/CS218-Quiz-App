@@ -17,7 +17,7 @@ const AttemptQuiz = () => {
     const fetchQuiz = async () => {
         try {
             const token = localStorage.getItem("token");
-            const res = await axios.get(`http://localhost:5000/quizzes/${quizId}/attempt`, {
+            const res = await axios.get(`http://3.142.36.11:5000/quizzes/${quizId}/attempt`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setQuizTitle(res.data.quiz_title);
@@ -34,7 +34,7 @@ const AttemptQuiz = () => {
     const submitQuiz = async () => {
         try {
             const token = localStorage.getItem("token");
-            const res = await axios.post(`http://localhost:5000/quizzes/${quizId}/submit`, 
+            const res = await axios.post(`http://3.142.36.11:5000/quizzes/${quizId}/submit`, 
                 { answers }, 
                 { headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" } }
             );

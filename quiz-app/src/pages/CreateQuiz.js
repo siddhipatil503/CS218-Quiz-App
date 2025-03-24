@@ -12,7 +12,7 @@ const CreateQuiz = () => {
     useEffect(() => {
         if (!token) return;
 
-        axios.get("http://localhost:5000/quizzes", {
+        axios.get("http://3.142.36.11:5000/quizzes", {
             headers: { Authorization: `Bearer ${token}` }
         })
         .then((res) => {
@@ -28,7 +28,7 @@ const CreateQuiz = () => {
 
     const handleCreateQuiz = async () => {
         try {
-            const res = await axios.post("http://localhost:5000/quizzes", { title }, {
+            const res = await axios.post("http://3.142.36.11:5000/quizzes", { title }, {
                 headers: { Authorization: `Bearer ${token}` }
             });
 

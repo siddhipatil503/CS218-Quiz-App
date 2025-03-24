@@ -11,7 +11,7 @@ app.config['JWT_VERIFY_SUB'] = False
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
-CORS(app)
+CORS(app, origins="*")
 
 # Models
 class User(db.Model):

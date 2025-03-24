@@ -12,7 +12,7 @@ const QuizDetails = () => {
     useEffect(() => {
         if (!token) return;
 
-        axios.get(`http://localhost:5000/quizzes/${quizId}/questions`, {
+        axios.get(`http://3.142.36.11:5000/quizzes/${quizId}/questions`, {
             headers: { Authorization: `Bearer ${token}` }
         })
         .then((res) => {

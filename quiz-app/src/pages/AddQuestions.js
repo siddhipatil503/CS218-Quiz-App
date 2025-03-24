@@ -12,7 +12,7 @@ const AddQuestions = () => {
 
     const handleAddQuestion = async () => {
         try {
-            await axios.post(`http://localhost:5000/quizzes/${quizId}/questions`, {
+            await axios.post(`http://3.142.36.11:5000/quizzes/${quizId}/questions`, {
                 question_text: questionText,
                 options,
                 answer,

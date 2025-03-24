@@ -15,7 +15,7 @@ const StudentDashboard = () => {
     const fetchQuizzes = async () => {
         try {
             const token = localStorage.getItem("token");
-            const res = await axios.get("http://localhost:5000/quizzes", {
+            const res = await axios.get("http://3.142.36.11:5000/quizzes", {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setQuizzes(res.data);
@@ -28,7 +28,7 @@ const StudentDashboard = () => {
     const fetchScores = async () => {
         try {
             const token = localStorage.getItem("token");
-            const res = await axios.get("http://localhost:5000/student/scores", {
+            const res = await axios.get("http://3.142.36.11:5000/student/scores", {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setScores(res.data);

@@ -22,7 +22,7 @@ const ModifyQuiz = () => {
 
     const fetchQuiz = async () => {
         try {
-            const res = await axios.get(`http://localhost:5000/quizzes/${quizId}`, {
+            const res = await axios.get(`http://3.142.36.11:5000/quizzes/${quizId}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setTitle(res.data.title);
@@ -34,7 +34,7 @@ const ModifyQuiz = () => {
 
     const updateTitle = async () => {
         try {
-            await axios.put(`http://localhost:5000/quizzes/${quizId}`, { title }, {
+            await axios.put(`http://3.142.36.11:5000/quizzes/${quizId}`, { title }, {
                 headers: { Authorization: `Bearer ${token}` },
             });
             alert("✅ Quiz title updated!");
@@ -54,7 +54,7 @@ const ModifyQuiz = () => {
                 correct_option: newQuestion.correctOption,
             };
 
-            const res = await axios.post(`http://localhost:5000/quizzes/${quizId}/questions`, payload, {
+            const res = await axios.post(`http://3.142.36.11:5000/quizzes/${quizId}/questions`, payload, {
                 headers: { Authorization: `Bearer ${token}` },
             });
 

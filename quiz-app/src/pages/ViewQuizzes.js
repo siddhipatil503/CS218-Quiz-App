@@ -15,7 +15,7 @@ const ViewQuizzes = () => {
 
     const fetchQuizzes = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/quizzes", {
+            const res = await axios.get("http://3.142.36.11:5000/quizzes", {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setQuizzes(res.data);
@@ -26,7 +26,7 @@ const ViewQuizzes = () => {
 
     const fetchQuizScores = async () => {
         try {
-            const res = await axios.get("http://localhost:5000/quizzes/scores", {
+            const res = await axios.get("http://3.142.36.11:5000/quizzes/scores", {
                 headers: { Authorization: `Bearer ${token}` },
             });
             setQuizScores(res.data); 

@@ -12,7 +12,7 @@ const ModifyQuestions = () => {
     useEffect(() => {
         if (!token) return;
 
-        axios.get(`http://localhost:5000/quizzes/${quizId}/questions`, {
+        axios.get(`http://3.142.36.11:5000/quizzes/${quizId}/questions`, {
             headers: { Authorization: `Bearer ${token}` }
         })
         .then((res) => setQuestions(res.data.questions || []))
@@ -27,7 +27,7 @@ const ModifyQuestions = () => {
         try {
             const updatedText = editedQuestions[questionId] || ""; 
 
-            await axios.put(`http://localhost:5000/quizzes/${quizId}/questions/${questionId}`, {
+            await axios.put(`http://3.142.36.11:5000/quizzes/${quizId}/questions/${questionId}`, {
                 question_text: updatedText
             }, {
                 headers: { Authorization: `Bearer ${token}` }
