@@ -2,19 +2,21 @@ version: '3.8'
 
 services:
   backend:
-    build: .
+    # build: .
+    image: siddhipatil5/flask-backend:latest
     container_name: flask-backend
     ports:
       - "5000:5000"
-    volumes:
-      - .:/app
+    # volumes:
+    #   - .:/app
     environment:
       - FLASK_ENV=development
     restart: always
 
   frontend:
-    build:
-      context: ./quiz-app
+    # build:
+      # context: ./quiz-app
+    image: siddhipatil5/react-frontend:latest
     container_name: react-frontend
     ports:
       - "3000:80"
