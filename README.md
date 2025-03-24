@@ -50,7 +50,7 @@ Tested using:
 - **Database**: SQLite
 - **Containerization**: Docker
 - **CI/CD**: GitHub Actions
-- **Cloud Deployment**: AWS (ECS or EC2 or Elastic Beanstalk)
+- **Cloud Deployment**: AWS (EC2)
 
 ## 🗺 Architecture Diagram
 
@@ -61,7 +61,7 @@ Tested using:
 +------------------------+       +------------------------+
         |                                      |
         +---------------- AWS -----------------+
-        |               ECS / EC2              |
+        |                 EC2                  |
         +--------------------------------------+
 ```
 
@@ -69,7 +69,7 @@ Tested using:
 
 ```bash
 # Clone repo
-git clone <your-private-repo-url>
+git clone [https://github.com/siddhipatil503/Quiz-App-]
 
 # Start the app
 docker-compose up --build
